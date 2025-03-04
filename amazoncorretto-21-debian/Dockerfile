@@ -15,7 +15,7 @@ RUN apt-get update \
   && unset GNUPGHOME \
   && echo "deb [signed-by=/usr/share/keyrings/corretto.gpg] https://apt.corretto.aws stable main" > /etc/apt/sources.list.d/corretto.list \
   && apt-get update \
-  && apt-get remove --purge --autoremove -y curl gnupg \
+  && apt-get remove --purge --autoremove -y gnupg \
   && apt-get install -y java-21-amazon-corretto-jdk \
   && rm -rf /var/lib/apt/lists/*
 
